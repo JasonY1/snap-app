@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DemoApp</title>
+  <title>Some inventory management</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,6 +11,20 @@
   <![endif]-->
 </head>
 <body>
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand logo-nav">Inventory Management</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to "Home",      root_path %>
+        </li>
+        <li>
+          <%#= link_to "Product", product_path %>
+        </li>
+      </ul>
+    </div>
 
 <%= yield %>
 
