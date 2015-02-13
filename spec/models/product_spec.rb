@@ -7,7 +7,7 @@ RSpec.describe Product, type: :model do
     product.type = "thing"
     product.quantity = 1
     it { is_expected.to validate_presence_of :name }
-    it { is expected.to validate_presence_of :type }
+    it { is_expected.to validate_presence_of :type }
     it { is_expected.to validate_presence_of :quantity }
     it { expect(product).to be_valid }
   end
@@ -15,6 +15,5 @@ RSpec.describe Product, type: :model do
   describe "invalid product"
   product = Product.new
   product.name = "some"
-  
   it { expect(product).to be_invalid }
 end
